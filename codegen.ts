@@ -10,18 +10,12 @@ const config: CodegenConfig = {
     "src/shared/**/*.graphql",
   ],
   generates: {
-    "src/__generated__/output.ts": {
-      plugins: [
-        "typescript",
-        "typescript-operations",
-        "typescript-react-apollo",
-      ],
-      config: {
-        enumsAsConst: true,
+    "./src/__generated__/": { 
+      preset: "client",
+      plugins: [],
+      presetConfig: {
+        fragmentMasking: false, 
       }
-    },
-    "schema.json": {
-      plugins: ['introspection']
     }
   }
 };
