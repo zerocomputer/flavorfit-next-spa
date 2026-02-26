@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
-import Header from '../shared/ui/header/header'
+import Header from '../shared/components/ui/header/header'
 import "./globals.css"
 import { Provider } from "./providers/Provider";
+import { ReactNode } from "react";
 
 const geistSans = Roboto({
   variable: "--font-geist-sans",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">

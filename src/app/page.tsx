@@ -1,5 +1,4 @@
 import { Filter, Search } from 'lucide-react'
-import InputControl from '../shared/ui/controls/input-control'
 
 export default function Home() {
   return (
@@ -10,11 +9,6 @@ export default function Home() {
           <p className='text-2xl'>За сегодня <b>8</b> упражнений</p>
         </div>
 
-        <InputControl 
-          placeholder='Поиск рецептов и не только' 
-          leftIcon={Search} 
-          rightIcon={Filter} 
-        />
       </div>
     </div>
   );

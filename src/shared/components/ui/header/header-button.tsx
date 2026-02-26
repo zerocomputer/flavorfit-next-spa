@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 export default function HeaderButton({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: ReactNode;
 }>) {
 	return (
 		<div
