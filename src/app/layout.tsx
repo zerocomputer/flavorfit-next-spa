@@ -4,6 +4,7 @@ import Header from '../shared/components/ui/header/header'
 import "./globals.css"
 import { Provider } from "./providers/Provider";
 import { ReactNode } from "react";
+import { Toaster } from "../shared/components/ui/sonner";
 
 const geistSans = Roboto({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <Provider>
           {children}
         </Provider>
+        <Toaster />
       </body>
     </html>
   );

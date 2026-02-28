@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-    return <div>
+    return <div className="min-h-[80vh] flex flex-col justify-center">
         <AuthForm type="signIn" />
     </div>
 }
