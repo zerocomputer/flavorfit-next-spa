@@ -25,6 +25,7 @@ body {
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-primary-link: var(--primary-link);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -69,10 +70,11 @@ body {
 
   /* Primary Brand Color - The Vibrant Purple used in headers and cards */
   --primary: oklch(0.65 0.25 280);
+  --primary-link: oklch(54.451% 0.17037 283.14);
   --primary-foreground: oklch(1 0 0);
 
   /* Secondary - Light gray for inactive states */
-  --secondary: oklch(0.95 0.01 280);
+  --secondary: oklch(84.174% 0.08342 288.273);
   --secondary-foreground: oklch(0.35 0.02 280);
 
   --muted: oklch(0.96 0.01 280);
@@ -116,7 +118,9 @@ body {
   --card-foreground: oklch(0.95 0.01 280);
   --popover: oklch(0.20 0.02 280);
   --popover-foreground: oklch(0.95 0.01 280);
+  --soft-primary: oklch(84.174% 0.08342 288.273);
   --primary: oklch(0.75 0.20 280);
+  --primary-link: oklch(54.451% 0.17037 283.14);
   --primary-foreground: oklch(0.15 0.02 280);
   --secondary: oklch(0.25 0.02 280);
   --secondary-foreground: oklch(0.95 0.01 280);
@@ -155,4 +159,26 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.link {
+  @apply text-primary-link underline underline-offset-4 transition-colors hover:text-primary font-medium;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:enabled,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:enabled,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:enabled,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 0px 1000px var(--background) inset;
+  box-shadow: 0 0 0px 1000px var(--background) inset;
+  background-color: var(--background); 
 }
