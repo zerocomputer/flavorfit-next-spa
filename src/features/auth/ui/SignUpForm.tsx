@@ -10,7 +10,7 @@ import { Input } from "@/src/shared/components/ui/input";
 import { isEmailRegex } from "../utils/is-email.regex";
 import { cn } from "@/src/shared/lib/utils";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/src/shared/components/ui/select";
-import { KeySquare, Mail, Signature, VenusAndMars } from "lucide-react";
+import { ArrowRight, KeySquare, Mail, Signature, VenusAndMars } from "lucide-react";
 
 export function SignUpForm() {
     const {
@@ -181,6 +181,7 @@ export function SignUpForm() {
             <Button
                 type="submit"
                 size={'xl'}
+                className="transition-all hover:rounded-sm"
                 disabled={loading || !isValid}
             >
                 Создать

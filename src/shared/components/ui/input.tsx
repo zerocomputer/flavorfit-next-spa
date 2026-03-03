@@ -35,7 +35,7 @@ function Input({
         data-slot="input"
         className={cn(
           "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30",
-          "h-full w-full min-w-0 bg-transparent text-base outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50",
+          "h-full w-full min-w-0 bg-transparent text-base outline-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 font-sans",
           LeftLucideIcon ? "pl-10" : "pl-4",
           RightLucideIcon ? "pr-10" : "pr-4"
         )}

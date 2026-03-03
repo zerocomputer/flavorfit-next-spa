@@ -1,9 +1,14 @@
 class PageConfig {
     readonly HOME = '/';
+    readonly AUTH = '/auth';
+    
+    readonly PROFILE = '/profile';
 
-    private readonly AUTH = '/auth';
-    readonly SIGN_IN = this.AUTH + '/signIn';
-    readonly SIGN_UP = this.AUTH + '/signUp';
+    readonly DASHBOARD = '/dashboard';
+    readonly PLANS = '/plans';
+    readonly ORDERS = '/orders';
+    readonly RECIPES = '/recipes';
+    readonly FORUM = '/forum';
 }
 
 export const PAGES = new PageConfig();  

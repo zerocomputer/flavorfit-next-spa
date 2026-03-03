@@ -9,7 +9,7 @@ import { Button } from "@/src/shared/components/ui/button";
 import { Input } from "@/src/shared/components/ui/input";
 import { isEmailRegex } from "../utils/is-email.regex";
 import { cn } from "@/src/shared/lib/utils";
-import { KeySquare, Mail } from "lucide-react";
+import { ArrowRight, KeySquare, Mail } from "lucide-react";
 
 export function SignInForm() {
     const {
@@ -95,6 +95,7 @@ export function SignInForm() {
             <Button
                 type="submit"
                 size={'xl'}
+                className="transition-all hover:rounded-sm"
                 disabled={loading || !isValid}
             >
                 Войти
