@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 export function HeaderNavMenu() {
     const pathname = usePathname();
     return (
-        <nav className="flex items-center gap-2">
+        <nav className="flex items-center gap-4">
             {
                 menuItems.map((item) => (
                     <HeaderNavItem menuItem={item} isActive={!!match(item.href)(pathname)} />

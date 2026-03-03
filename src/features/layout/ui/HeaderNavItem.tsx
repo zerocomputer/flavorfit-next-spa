@@ -12,14 +12,20 @@ export function HeaderNavItem({ menuItem, isActive }: HeaderNavItemProps) {
         <Link
             href={menuItem.href}
             className={cn(
-                "text-secondary-foreground py-2 px-4 rounded-md bg-transparent scale-100",
+                "text-secondary-foreground py-3 px-4 rounded-4xl bg-muted font-sans group",
                 "flex items-center gap-3",
-                "transition-all hover:bg-secondary hover:rounded-4xl hover:scale-110 duration-500",
-                isActive && "bg-secondary rounded-4xl scale-110"
+                "transition-all hover:bg-popover-foreground hover:text-popover hover:rounded-sm duration-300",
+                isActive && "bg-popover-foreground text-popover rounded-sm"
             )}
         >
-            <menuItem.icon size={20} className="text-primary" />
-            {menuItem.label}
+            <menuItem.icon
+                className={cn(
+                    "transition-transform group-hover:scale-130 duration-500",
+                    isActive && "scale-130"
+                )}
+                size={18}
+            />
+            <span className="leading-none">{menuItem.label}</span>
         </Link>
     );
 }

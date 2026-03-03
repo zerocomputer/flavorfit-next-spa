@@ -53,7 +53,7 @@
   --radius: 0.625rem;
 
   /* Base UI Colors - White/Light Gray theme matching the browser window */
-  --background: oklch(0.97 0.01 280);
+  --background: rgb(225, 225, 225);
   /* Very light gray/purple tint */
   --foreground: oklch(0.25 0.02 280);
   /* Dark gray text */
@@ -74,7 +74,7 @@
   --secondary: oklch(84.174% 0.08342 288.273);
   --secondary-foreground: oklch(0.35 0.02 280);
 
-  --muted: oklch(0.96 0.01 280);
+  --muted: rgb(244, 244, 244);
   --muted-foreground: oklch(0.55 0.02 280);
 
   /* Accent - The Yellow used for date highlights (22 Mon) */
