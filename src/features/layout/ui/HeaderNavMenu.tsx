@@ -11,7 +11,7 @@ export function HeaderNavMenu() {
         <nav className="flex items-center gap-4">
             {
                 menuItems.map((item) => (
-                    <HeaderNavItem menuItem={item} isActive={!!match(item.href)(pathname)} />
+                    <HeaderNavItem key={item.href} menuItem={item} isActive={!!match(item.href)(pathname)} />
                 ))
             }
         </nav>

@@ -19,10 +19,6 @@ export function HeaderNavItem({ menuItem, isActive }: HeaderNavItemProps) {
             )}
         >
             <menuItem.icon
-                className={cn(
-                    "transition-transform group-hover:scale-130 duration-500",
-                    isActive && "scale-130"
-                )}
                 size={18}
             />
             <span className="leading-none">{menuItem.label}</span>
