@@ -16,6 +16,8 @@ import { Label } from "@/src/shared/components/ui/label";
 import { Input } from "@/src/shared/components/ui/input";
 import { Button } from "@/src/shared/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/src/shared/components/ui/tabs";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/src/shared/components/ui/dropdown-menu";
+import { cn } from "@/src/shared/lib/utils";
 
 export function Header() {
     const [
@@ -28,6 +30,11 @@ export function Header() {
         setIsSupportDialogOpen
     ] = useState(false);
     
+    const [
+        isUserDropdownOpen,
+        setIsUserDropdownOpen
+    ] = useState(false);
+
     return (
         <header className="fixed top-0 left-0 right-0 z-50">
             <div className="flex items-center py-4 px-8">
@@ -111,11 +118,25 @@ export function Header() {
                         </PopoverContent>
                     </Popover>
 
-                    <HeaderUser
-                        avatarUrl="https://github.com/zerocomputer.png"
-                        name="Nikita"
-                        email="zerocomputer@yandex.ru"
-                    />
+                    <DropdownMenu
+                        open={isUserDropdownOpen}
+                        onOpenChange={setIsUserDropdownOpen}
+                    >
+                        <DropdownMenuTrigger className="outline-0" asChild>
+                            <HeaderUser
+                                avatarUrl="https://github.com/zerocomputer.png"
+                                name="Nikita"
+                                email="zerocomputer@yandex.ru"
+                                isActive={isUserDropdownOpen}
+                            />
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="end">
+                            <Link href={PAGES.PROFILE}>
+                                <DropdownMenuItem>Профиль</DropdownMenuItem>
+                            </Link>
+                            <DropdownMenuItem>Выйти</DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
                 </div>
             </div>
         </header>
