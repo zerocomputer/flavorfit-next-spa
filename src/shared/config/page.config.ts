@@ -1,13 +1,13 @@
 class PageConfig {
-    readonly HOME = '/';
-    readonly AUTH = '/auth';
+  readonly HOME = "/";
+  readonly AUTH = "/auth";
 
-    readonly DASHBOARD = '/dashboard';
-    readonly PLANS = this.DASHBOARD + '/plans';
-    readonly ORDERS = this.DASHBOARD + '/orders';
-    readonly RECIPES = this.DASHBOARD + '/recipes';
-    readonly FORUM = this.DASHBOARD + '/forum';
-    readonly PROFILE = this.DASHBOARD + '/profile';
+  readonly DASHBOARD = "/dashboard";
+  readonly PLANS = "/plans";
+  readonly ORDERS = "/orders";
+  readonly RECIPES = "/recipes";
+  readonly FORUM = "/forum";
+  readonly PROFILE = "/profile";
 }
 
-export const PAGES = new PageConfig();  
+export const PAGES = new PageConfig();

@@ -1,24 +1,24 @@
 query Me {
-    me() {
-        id
-        role
-        firstName
-        lastName
-        gender
-        email
-        phoneNumber
-        biography
-        photoUrl
-        profiles {
-            id
-            height
-            currentWeight
-            targetWeight
-            waistCircumference
-            chestCircumference
-            hipsCircumference
-            armCircumference
-            createdAt
-        }
+  me {
+    id
+    role
+    firstName
+    lastName
+    gender
+    email
+    phoneNumber
+    biography
+    photoUrl
+    profiles {
+      id
+      height
+      currentWeight
+      targetWeight
+      waistCircumference
+      chestCircumference
+      hipsCircumference
+      armCircumference
+      createdAt
     }
+  }
 }
